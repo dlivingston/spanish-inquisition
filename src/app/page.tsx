@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 
 import React, { useState } from 'react';
@@ -23,12 +24,12 @@ export default function Home() {
 
   const [validationMessage, setValidationMessage] = useState('');
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: any) => {
     const { id, value } = e.target;
     setFormData({ ...formData, [id]: value });
   };
 
-  const handleCheckboxChange = (e) => {
+  const handleCheckboxChange = (e: any) => {
     const { id, checked } = e.target;
     setFormData((prevState) => {
       const newBorrowers = checked
@@ -38,7 +39,7 @@ export default function Home() {
     });
   };
 
-  const handleRadioChange = (e) => {
+  const handleRadioChange = (e: any) => {
     const { id } = e.target;
     setFormData({ ...formData, escrowStatus: id });
   };
@@ -53,7 +54,7 @@ export default function Home() {
     setValidationMessage('');
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
     const { name, category, escrowStatus, borrowers } = formData;
     if (name && category && escrowStatus && borrowers.length > 0) {
