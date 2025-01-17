@@ -77,7 +77,7 @@ export default function Home() {
             Cancel
           </button>
       </header>
-      <main className="bg-white mt-6 rounded-md flex flex-col w-full min-w-[560px] max-w-[880px] p-8">
+      <main className="bg-white mt-6 rounded-md flex flex-col w-11/12 min-w-[560px] lg:w-full max-w-[880px] p-8 mx-4">
         <h2 className="text-2xl mb-4">Our Chief Weapon is Surprise</h2>
         <form className="w-full">
           <div className="mb-4">
